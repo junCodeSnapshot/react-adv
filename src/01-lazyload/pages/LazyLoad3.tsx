@@ -4,3 +4,6 @@ export const LazyLoad3 = () => {
         <h1>LazyLoad3</h1>
     )
 }
+
+
+export default LazyLoad3;

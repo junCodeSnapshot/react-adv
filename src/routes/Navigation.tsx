@@ -9,16 +9,16 @@ export const Navigation = () => {
                 <nav>
                     <img src={logo} alt="React Logo" />
                     <ul>
-                        <li><NavLink to='/' className={({ isActive }) => (isActive ? "nav-active" : "")}>Shopping</NavLink></li>
-                        <li><NavLink to='/about' className={({ isActive }) => (isActive ? "nav-active" : "")}>About</NavLink></li>
-                        <li><NavLink to='/users' className={({ isActive }) => (isActive ? "nav-active" : "")}>Users</NavLink></li>
+                        <li><NavLink to='/' className={({ isActive }) => isActive ? "nav-active" : ""}>Shopping</NavLink></li>
+                        <li><NavLink to='/about' className={({ isActive }) => isActive ? "nav-active" : ""}>About</NavLink></li>
+                        <li><NavLink to='/users' className={({ isActive }) => isActive ? "nav-active" : ""}>Users</NavLink></li>
                     </ul>
                 </nav>
                 <Routes>
                     <Route path='/' element={<ShoppingPages />} />
                     <Route path='about' element={<AboutPage />} />
                     <Route path='users' element={<UsersPage />} />
-                    <Route path="/*" element={<Navigate to="/home" />} />
+                    <Route path="/*" element={<Navigate to="/" />} />
                 </Routes>
             </div>
         </BrowserRouter>
